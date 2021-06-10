@@ -1,0 +1,287 @@
+def index = rootProject.rootDir.toString().findLastIndexOf { rootProject.name }
+def rootPath = rootProject.rootDir.toString().substring(0, index + 1)
+apply from: "$rootPath/config.gradle"
+
+
+ext {
+    useDefaultConfiguration = { model ->
+        println "--- ${model.name}"
+        switch (model.libType) {
+            case JAVA_MAIN_LIB:
+                project.apply plugin: 'com.android.application'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        applicationId model.id
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    signingConfigs{
+                        debug {
+                            storeFile file("..//keystore//daimhim.jks")//keystore的路径
+                            storePassword "654321"
+                            keyAlias "Daimhim"
+                            keyPassword "654321"
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_MAIN_LIB:
+                project.apply plugin: 'com.android.application'
+                project.apply plugin: 'kotlin-android'
+                project.apply plugin: 'kotlin-kapt'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        applicationId model.id
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+                        versionCode 1
+                        versionName "1.0"
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case JAVA_LIB:
+                project.apply plugin: 'java-library'
+                project.java {
+                    sourceCompatibility = JavaVersion.VERSION_1_8
+                    targetCompatibility = JavaVersion.VERSION_1_8
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_LIB:
+                project.apply plugin: 'java-library'
+                project.apply plugin: 'kotlin'
+                project.apply plugin: 'kotlin-kapt'
+                project.java {
+                    sourceCompatibility = JavaVersion.VERSION_1_8
+                    targetCompatibility = JavaVersion.VERSION_1_8
+                }
+                project.dependencies {
+                }
+                break
+            case JAVA_SDK:
+                project.apply plugin: 'com.android.library'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+                        versionCode 1
+                        versionName "1.0"
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                        consumerProguardFiles "consumer-rules.pro"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_SDK:
+                project.apply plugin: 'com.android.library'
+                project.apply plugin: 'kotlin-android'
+                project.apply plugin: 'kotlin-kapt'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                        consumerProguardFiles "consumer-rules.pro"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case BUILD_SRC:
+                break
+            case GROOVY_LIB:
+                break
+            case JAVA_MODEL_LIB:
+                project.apply plugin: 'com.android.application'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        applicationId model.id
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+                        versionCode 1
+                        versionName "1.0"
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case JAVA_MODEL_TRANSFORM_LIB:
+                project.apply plugin: 'com.android.library'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+                        versionCode 1
+                        versionName "1.0"
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                        consumerProguardFiles "consumer-rules.pro"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_MODEL_LIB:
+                project.apply plugin: 'com.android.application'
+                project.apply plugin: 'kotlin-android'
+                project.apply plugin: 'kotlin-kapt'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        applicationId model.id
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+                        versionCode 1
+                        versionName "1.0"
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_MODEL_TRANSFORM_LIB:
+                project.apply plugin: 'com.android.library'
+                project.apply plugin: 'kotlin-android'
+                project.apply plugin: 'kotlin-kapt'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                        consumerProguardFiles "consumer-rules.pro"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case OTHER_LIB:
+                break
+            default:
+                break
+        }
+        if (modelCEX[model.libType] != null){
+            modelCEX[model.libType].execute()
+        }
+    }
+}
+def modelInfo = ext.modules[this.name]
+useDefaultConfiguration(modelInfo)
