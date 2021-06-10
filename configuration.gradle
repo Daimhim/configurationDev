@@ -19,11 +19,11 @@ ext {
         switch (libType){
             case JAVA_MODEL_LIB:
             case JAVA_MODEL_TRANSFORM_LIB:
-                mode = IS_MAIN_DEV == "true" ? JAVA_MODEL_LIB : JAVA_MODEL_TRANSFORM_LIB
+                mode = IS_MAIN_DEV == "false" ? JAVA_MODEL_LIB : JAVA_MODEL_TRANSFORM_LIB
                 break
             case KOTLIN_MODEL_LIB:
             case KOTLIN_MODEL_TRANSFORM_LIB:
-                mode = IS_MAIN_DEV == "true" ? KOTLIN_MODEL_LIB : KOTLIN_MODEL_TRANSFORM_LIB
+                mode = IS_MAIN_DEV == "false" ? KOTLIN_MODEL_LIB : KOTLIN_MODEL_TRANSFORM_LIB
                 break
             default:
                 mode = libType
