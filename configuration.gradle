@@ -43,6 +43,7 @@ ext {
             multidex               : 'androidx.multidex:multidex:2.0.1',
             navigation_fragment    : 'androidx.navigation:navigation-fragment:2.3.5',
             navigation_ui          : 'androidx.navigation:navigation-ui:2.3.5',
+            recyclerview          : 'androidx.recyclerview:recyclerview:1.2.1',
     ]
     //Android 基础模块
     kotlinAndroidDependencies = [
