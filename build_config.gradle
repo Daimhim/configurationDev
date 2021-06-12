@@ -26,14 +26,6 @@ ext {
                             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
                         }
                     }
-                    signingConfigs{
-                        debug {
-                            storeFile file("..//keystore//daimhim.jks")//keystore的路径
-                            storePassword "654321"
-                            keyAlias "Daimhim"
-                            keyPassword "654321"
-                        }
-                    }
                     compileOptions {
                         sourceCompatibility JavaVersion.VERSION_1_8
                         targetCompatibility JavaVersion.VERSION_1_8
@@ -53,8 +45,6 @@ ext {
                         applicationId model.id
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
-                        versionCode 1
-                        versionName "1.0"
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
@@ -101,8 +91,6 @@ ext {
                     defaultConfig {
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
-                        versionCode 1
-                        versionName "1.0"
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -164,8 +152,6 @@ ext {
                         applicationId model.id
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
-                        versionCode 1
-                        versionName "1.0"
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
@@ -192,8 +178,6 @@ ext {
                     defaultConfig {
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
-                        versionCode 1
-                        versionName "1.0"
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -224,8 +208,6 @@ ext {
                         applicationId model.id
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
-                        versionCode 1
-                        versionName "1.0"
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
