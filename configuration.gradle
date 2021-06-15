@@ -155,11 +155,22 @@ ext {
             androidx_junit: 'androidx.test.ext:junit:1.1.2', //androidTestImplementation
             espresso_core : 'androidx.test.espresso:espresso-core:3.3.0', //androidTestImplementation
     ]
-    modelCEX = new HashMap<Integer,ConfigurationExtensions>()
-    addConfigExtensions = {libType,ConfigurationExtensions ce->
-        (modelCEX[libType] = ce)
+    modelCEX = new HashMap<Integer,List<ConfigurationExtensions>>()
+    addConfigExtensions = {ConfigurationExtensions ce, int... libType->
+        List<ConfigurationExtensions> ces = null
+        for (item in libType) {
+            println "item $item"
+            if (modelCEX.containsKey(item)){
+                ces = ((List<ConfigurationExtensions>)modelCEX.get(item))
+            }else {
+                ces = new ArrayList<>()
+            }
+            ces.add(ce)
+            modelCEX[item] = ces
+        }
     }
 }
+
 interface ConfigurationExtensions{
     void execute()
 }

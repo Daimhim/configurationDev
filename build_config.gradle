@@ -260,8 +260,10 @@ ext {
             default:
                 break
         }
-        if (modelCEX[model.libType] != null){
-            modelCEX[model.libType].execute()
+        if(modelCEX.containsKey(model.libType)){
+            for(item in modelCEX[model.libType]){
+                 item.execute()
+            }
         }
     }
 }
