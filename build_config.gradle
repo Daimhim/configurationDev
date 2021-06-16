@@ -5,7 +5,6 @@ apply from: "$rootPath/config.gradle"
 
 ext {
     useDefaultConfiguration = { model ->
-        println "--- ${model.name}"
         switch (model.libType) {
             case JAVA_MAIN_LIB:
                 project.apply plugin: 'com.android.application'
