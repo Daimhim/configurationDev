@@ -1,5 +1,7 @@
-def index = rootProject.rootDir.toString().findLastIndexOf { rootProject.name }
-def rootPath = rootProject.rootDir.toString().substring(0, index + 1)
+def projectName = "StandByMe"
+def rootDir = new StringBuffer(rootProject.rootDir.toString())
+def index = rootDir.indexOf(projectName)
+def rootPath = rootDir.substring(0, index+projectName.length())
 apply from: "$rootPath/config.gradle"
 
 
