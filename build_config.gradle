@@ -266,6 +266,11 @@ ext {
                  item.execute()
             }
         }
+        if(modelCEX2.containsKey(model.name)){
+            for(item in modelCEX[model.name]){
+                 item.execute()
+            }
+        }
     }
 }
 def modelInfo = ext.modules[this.name]

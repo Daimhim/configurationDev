@@ -158,7 +158,7 @@ ext {
             espresso_core : 'androidx.test.espresso:espresso-core:3.3.0', //androidTestImplementation
     ]
     modelCEX = new HashMap<Integer, List<ConfigurationExtensions>>()
-    addConfigExtensions = { ConfigurationExtensions ce, int ... libType ->
+    addConfigExtensions = { ConfigurationExtensions ce, int... libType ->
         List<ConfigurationExtensions> ces = null
         for (item in libType) {
             if (modelCEX.containsKey(item)) {
@@ -168,6 +168,19 @@ ext {
             }
             ces.add(ce)
             modelCEX[item] = ces
+        }
+    }
+    modelCEX2 = new HashMap<String, List<ConfigurationExtensions>>()
+    addCustomExtensions = { ConfigurationExtensions ce, String... libName ->
+        List<ConfigurationExtensions> ces = null
+        for (item in libName) {
+            if (modelCEX2.containsKey(libName)) {
+                ces = ((List<ConfigurationExtensions>) modelCEX2.get(item))
+            } else {
+                ces = new ArrayList<>()
+            }
+            ces.add(ce)
+            modelCEX2[item] = ces
         }
     }
 }
