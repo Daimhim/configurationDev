@@ -150,6 +150,7 @@ ext {
             arouter_compiler         : 'com.alibaba:arouter-compiler:1.5.1',
             auto_service_annotations : 'com.google.auto.service:auto-service-annotations:1.0-rc6',
             auto_service             : 'com.google.auto.service:auto-service:1.0-rc6',
+            android                  : 'com.google.android:android:4.1.1.4',
     ]
     //Android 单元和UI测试
     androidTest = [
@@ -158,7 +159,7 @@ ext {
             espresso_core : 'androidx.test.espresso:espresso-core:3.3.0', //androidTestImplementation
     ]
     modelCEX = new HashMap<Integer, List<ConfigurationExtensions>>()
-    addConfigExtensions = { ConfigurationExtensions ce, int... libType ->
+    addConfigExtensions = { ConfigurationExtensions ce, int ... libType ->
         List<ConfigurationExtensions> ces = null
         for (item in libType) {
             if (modelCEX.containsKey(item)) {
