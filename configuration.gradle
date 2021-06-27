@@ -151,6 +151,7 @@ ext {
             auto_service_annotations : 'com.google.auto.service:auto-service-annotations:1.0-rc6',
             auto_service             : 'com.google.auto.service:auto-service:1.0-rc6',
             android                  : 'com.google.android:android:4.1.1.4',
+            mmkv_static              : 'com.tencent:mmkv-static:1.2.10',
     ]
     //Android 单元和UI测试
     androidTest = [
