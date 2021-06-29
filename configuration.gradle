@@ -34,130 +34,130 @@ ext {
 
     //Android原生依赖
     androidxDependencies = [
-            appcompat              : 'androidx.appcompat:appcompat:1.2.0',
-            material               : 'com.google.android.material:material:1.3.0',
-            constraintlayout       : 'androidx.constraintlayout:constraintlayout:2.0.4',
-            swiperefreshlayout     : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
-            lifecycle_livedata_ktx : 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1',
-            lifecycle_viewmodel_ktx: 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1',
-            multidex               : 'androidx.multidex:multidex:2.0.1',
-            navigation_fragment    : 'androidx.navigation:navigation-fragment:2.3.5',
-            navigation_ui          : 'androidx.navigation:navigation-ui:2.3.5',
-            recyclerview           : 'androidx.recyclerview:recyclerview:1.2.1',
+            'appcompat'              : 'androidx.appcompat:appcompat:1.2.0',
+            'material'               : 'com.google.android.material:material:1.3.0',
+            'constraintlayout'       : 'androidx.constraintlayout:constraintlayout:2.0.4',
+            'swiperefreshlayout'     : 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
+            'lifecycle_livedata_ktx' : 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1',
+            'lifecycle_viewmodel_ktx': 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1',
+            'multidex'               : 'androidx.multidex:multidex:2.0.1',
+            'navigation_fragment'    : 'androidx.navigation:navigation-fragment:2.3.5',
+            'navigation_ui'          : 'androidx.navigation:navigation-ui:2.3.5',
+            'recyclerview'           : 'androidx.recyclerview:recyclerview:1.2.1',
     ]
     //Android 基础模块
     kotlinAndroidDependencies = [
-            core_ktx: 'androidx.core:core-ktx:1.3.2',
+            'core_ktx': 'androidx.core:core-ktx:1.3.2',
     ]
     // kotlin 基础模块
     kotlinJavaDependencies = [
-            kotlin_stdlib: "org.jetbrains.kotlin:kotlin-stdlib:1.4.32",
+            'kotlin_stdlib': "org.jetbrains.kotlin:kotlin-stdlib:1.4.32",
     ]
     def camerax_version = '1.1.0-alpha04'
     def j_push_version = '4.0.6'
     //统一的lib 版本管理 除apk模块以外 其他模块依赖时请使用 编译模式
     globalDependencies = [
-            coil                     : "io.coil-kt:coil:1.2.0",
-            timber                   : 'com.jakewharton.timber:timber:4.7.1',
-            gson                     : 'com.google.code.gson:gson:2.8.6',
-            kotlinpoet               : 'com.squareup:kotlinpoet:1.7.2',
-            javapoet                 : 'com.squareup:javapoet:1.13.0',
-            retrofit                 : 'com.squareup.retrofit2:retrofit:2.9.0',
-            converter_gson           : 'com.squareup.retrofit2:converter-gson:2.9.0',
-            okhttp                   : 'com.squareup.okhttp3:okhttp:3.12.13',
-            logging_interceptor      : "com.squareup.okhttp3:logging-interceptor:3.12.13",
-            flexbox                  : 'com.google.android:flexbox:2.0.1',
+            'coil'                     : "io.coil-kt:coil:1.2.0",
+            'timber'                   : 'com.jakewharton.timber:timber:4.7.1',
+            'gson'                     : 'com.google.code.gson:gson:2.8.6',
+            'kotlinpoet'               : 'com.squareup:kotlinpoet:1.7.2',
+            'javapoet'                 : 'com.squareup:javapoet:1.13.0',
+            'retrofit'                 : 'com.squareup.retrofit2:retrofit:2.9.0',
+            'converter_gson'           : 'com.squareup.retrofit2:converter-gson:2.9.0',
+            'okhttp'                   : 'com.squareup.okhttp3:okhttp:3.12.13',
+            'logging_interceptor'      : "com.squareup.okhttp3:logging-interceptor:3.12.13",
+            'flexbox'                  : 'com.google.android:flexbox:2.0.1',
             // CameraX core library
-            camera_core              : "androidx.camera:camera-core:$camerax_version",
-            camera_camera2           : "androidx.camera:camera-camera2:$camerax_version",
-            camera_lifecycle         : "androidx.camera:camera-lifecycle:$camerax_version",
-            camera_extensions        : 'androidx.camera:camera-extensions:1.0.0-alpha24',
-            camera_view              : 'androidx.camera:camera-view:1.0.0-alpha24',
+            'camera_core'              : "androidx.camera:camera-core:$camerax_version",
+            'camera_camera2'           : "androidx.camera:camera-camera2:$camerax_version",
+            'camera_lifecycle'         : "androidx.camera:camera-lifecycle:$camerax_version",
+            'camera_extensions'        : 'androidx.camera:camera-extensions:1.0.0-alpha24',
+            'camera_view'              : 'androidx.camera:camera-view:1.0.0-alpha24',
             //极光推送
-            jcore                    : 'cn.jiguang.sdk:jcore:2.8.0',
-            jpush                    : "cn.jiguang.sdk:jpush:$j_push_version",//极光推送
-            huawei_push              : 'com.huawei.hms:push:5.1.1.301',
-            huawei_plugin            : "cn.jiguang.sdk.plugin:huawei:$j_push_version",
-            xiaomi_plugin            : "cn.jiguang.sdk.plugin:xiaomi:$j_push_version",
-            oppo_plugin              : "cn.jiguang.sdk.plugin:oppo:$j_push_version",
-            vivo_plugin              : "cn.jiguang.sdk.plugin:vivo:$j_push_version",
+            'jcore'                    : 'cn.jiguang.sdk:jcore:2.8.0',
+            'jpush'                    : "cn.jiguang.sdk:jpush:$j_push_version",//极光推送
+            'huawei_push'              : 'com.huawei.hms:push:5.1.1.301',
+            'huawei_plugin'            : "cn.jiguang.sdk.plugin:huawei:$j_push_version",
+            'xiaomi_plugin'            : "cn.jiguang.sdk.plugin:xiaomi:$j_push_version",
+            'oppo_plugin'              : "cn.jiguang.sdk.plugin:oppo:$j_push_version",
+            'vivo_plugin'              : "cn.jiguang.sdk.plugin:vivo:$j_push_version",
             //https://github.com/Nightonke/BoomMenu
-            boommenu                 : 'com.nightonke:boommenu:2.0.3',
+            'boommenu'                 : 'com.nightonke:boommenu:2.0.3',
             //数据库
-            room_runtime             : "android.arch.persistence.room:runtime:1.1.1",
-            room_compiler            : "android.arch.persistence.room:compiler:1.1.1",
+            'room_runtime'             : "android.arch.persistence.room:runtime:1.1.1",
+            'room_compiler'            : "android.arch.persistence.room:compiler:1.1.1",
             //地图
-            amap_3dmap               : 'com.amap.api:3dmap:7.7.0',
-            amap_location            : 'com.amap.api:location:5.0.0',
-            amap_search              : 'com.amap.api:search:7.3.0',
+            'amap_3dmap'               : 'com.amap.api:3dmap:7.7.0',
+            'amap_location'            : 'com.amap.api:location:5.0.0',
+            'amap_search'              : 'com.amap.api:search:7.3.0',
             //统计
-            mtj_sdk_circle           : 'com.baidu.mobstat:mtj-sdk-circle:4.0.2.2',
+            'mtj_sdk_circle'           : 'com.baidu.mobstat:mtj-sdk-circle:4.0.2.2',
             //bugly
-            crashreport              : 'com.tencent.crashreport:crashreport:3.3.7',
-            nativecrashreport        : 'com.tencent.bugly:nativecrashreport:3.8.0',
+            'crashreport'              : 'com.tencent.crashreport:crashreport:3.3.7',
+            'nativecrashreport'        : 'com.tencent.bugly:nativecrashreport:3.8.0',
             //跑马灯，可以垂直方向跑
-            marqueeview              : 'com.sunfusheng:MarqueeView:1.4.1',
+            'marqueeview'              : 'com.sunfusheng:MarqueeView:1.4.1',
             //https://github.com/EverythingMe/overscroll-decor
             // 滚动视图 用于RecyclerView, ListView, GridView, ScrollView
-            overscroll_decor         : 'io.github.everythingme:overscroll-decor-android:1.1.1',
+            'overscroll_decor'         : 'io.github.everythingme:overscroll-decor-android:1.1.1',
             //https://github.com/leolin310148/ShortcutBadger
             //桌面角标
-            shortcut_badger          : "me.leolin:ShortcutBadger:1.1.22@aar",
+            'shortcut_badger'          : "me.leolin:ShortcutBadger:1.1.22@aar",
             //https://github.com/Baseflow/PhotoView
             //图片缩放控件
-            photoview                : "com.github.chrisbanes.photoview:library:1.2.4",
+            'photoview'                : "com.github.chrisbanes.photoview:library:1.2.4",
             //https://github.com/AnderWeb/discreteSeekBar
             //拖动进度条，有进度显示泡泡
-            discrete_seekbar         : 'org.adw.library:discrete-seekbar:1.0.1',
+            'discrete_seekbar'         : 'org.adw.library:discrete-seekbar:1.0.1',
             //https://github.com/yangpeixing/YImagePicker
             //微信UI样式图片和视频选择
-            yimagepicker             : 'com.ypx.yimagepicker:androidx:3.1.4',
+            'yimagepicker'             : 'com.ypx.yimagepicker:androidx:3.1.4',
             //https://gitee.com/z8806c/ImagePicker
             //图片选择器
-            ImagePicker              : 'com.gitee.harisucici:ImagePicker:0.0.2',
+            'imagePicker'              : 'com.gitee.harisucici:ImagePicker:0.0.2',
             //glide 高斯模糊
-            glide_transformations    : 'jp.wasabeef:glide-transformations:3.0.1',
+            'glide_transformations'    : 'jp.wasabeef:glide-transformations:3.0.1',
             //侧滑库
-            swipe_reveal_layout      : 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0',
+            'swipe_reveal_layout'      : 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0',
             //解决LiveData数据倒灌
-            livedataplus             : 'org.daimhim.livedataplus:livedataplus:1.0.1',
+            'livedataplus'             : 'org.daimhim.livedataplus:livedataplus:1.0.1',
             //阿里云热修复
-            alicloud_android_hotfix  : 'com.aliyun.ams:alicloud-android-hotfix:3.2.15',
-            tagsoup                  : 'org.ccil.cowan.tagsoup:tagsoup:1.2.1',
+            'alicloud_android_hotfix'  : 'com.aliyun.ams:alicloud-android-hotfix:3.2.15',
+            'tagsoup'                  : 'org.ccil.cowan.tagsoup:tagsoup:1.2.1',
             // https://mvnrepository.com/artifact/org.ccil.cowan.tagsoup/tagsoup css解析
             ////解析HTML
-            jsoup                    : 'org.jsoup:jsoup:1.12.1',
+            'jsoup'                    : 'org.jsoup:jsoup:1.12.1',
             //扫描车牌ui
-            scanner                  : 'com.shouzhong:Scanner:1.1.3',
+            'scanner'                  : 'com.shouzhong:Scanner:1.1.3',
             // 车牌识别库so
-            scanner_license_plate_lib: 'com.shouzhong:ScannerLicensePlateLib:1.0.3',
+            'scanner_license_plate_lib': 'com.shouzhong:ScannerLicensePlateLib:1.0.3',
             //浏览器控件
-            web_view_lib             : 'cn.yc:WebViewLib:1.4.0',
+            'web_view_lib'             : 'cn.yc:WebViewLib:1.4.0',
             //阿里云视频上传
-            aliyun_video_upload      : 'com.aliyun.video.android:upload:1.6.0',
+            'aliyun_video_upload'      : 'com.aliyun.video.android:upload:1.6.0',
             //DK 播放器 必选，内部默认使用系统mediaplayer进行解码
-            dkplayer_java            : 'com.github.dueeeke.dkplayer:dkplayer-java:3.2.6',
+            'dkplayer_java'            : 'com.github.dueeeke.dkplayer:dkplayer-java:3.2.6',
             //DK 播放器UI框架
-            dkplayer_ui              : 'com.github.dueeeke.dkplayer:dkplayer-ui:3.2.6',
+            'dkplayer_ui'              : 'com.github.dueeeke.dkplayer:dkplayer-ui:3.2.6',
             //ijkplayer进行解码
-            player_ijk               : 'com.github.dueeeke.dkplayer:player-ijk:3.2.6',
+            'player_ijk'               : 'com.github.dueeeke.dkplayer:player-ijk:3.2.6',
             // exoplayer-core
-            exoplayer_core           : 'com.google.android.exoplayer:exoplayer-core:2.13.3',
+            'exoplayer_core'           : 'com.google.android.exoplayer:exoplayer-core:2.13.3',
             // extension-okhttp
-            extension_okhttp         : 'com.google.android.exoplayer:extension-okhttp:2.13.3',
+            'extension_okhttp'         : 'com.google.android.exoplayer:extension-okhttp:2.13.3',
             //ARouter  https://github.com/alibaba/ARouter
-            arouter_api              : 'com.alibaba:arouter-api:1.5.1',
-            arouter_compiler         : 'com.alibaba:arouter-compiler:1.5.1',
-            auto_service_annotations : 'com.google.auto.service:auto-service-annotations:1.0-rc6',
-            auto_service             : 'com.google.auto.service:auto-service:1.0-rc6',
-            android                  : 'com.google.android:android:4.1.1.4',
-            mmkv_static              : 'com.tencent:mmkv-static:1.2.10',
+            'arouter_api'              : 'com.alibaba:arouter-api:1.5.1',
+            'arouter_compiler'         : 'com.alibaba:arouter-compiler:1.5.1',
+            'auto_service_annotations' : 'com.google.auto.service:auto-service-annotations:1.0-rc6',
+            'auto_service'             : 'com.google.auto.service:auto-service:1.0-rc6',
+            'android'                  : 'com.google.android:android:4.1.1.4',
+            'mmkv_static'              : 'com.tencent:mmkv-static:1.2.10',
     ]
     //Android 单元和UI测试
     androidTest = [
-            junit         : 'junit:junit:4.13.2', //testImplementation
-            androidx_junit: 'androidx.test.ext:junit:1.1.2', //androidTestImplementation
-            espresso_core : 'androidx.test.espresso:espresso-core:3.3.0', //androidTestImplementation
+            'junit'         : 'junit:junit:4.13.2', //testImplementation
+            'androidx_junit': 'androidx.test.ext:junit:1.1.2', //androidTestImplementation
+            'espresso_core' : 'androidx.test.espresso:espresso-core:3.3.0', //androidTestImplementation
     ]
     modelCEX = new HashMap<Integer, List<ConfigurationExtensions>>()
     addConfigExtensions = { ConfigurationExtensions ce, int ... libType ->
