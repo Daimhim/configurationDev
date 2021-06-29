@@ -86,6 +86,7 @@ ext {
                 break
             case JAVA_SDK:
                 project.apply plugin: 'com.android.library'
+                project.apply plugin: 'java-library'
                 project.android {
                     compileSdkVersion compile_Sdk_Version
                     buildToolsVersion build_Tools_Version
@@ -274,4 +275,5 @@ ext {
     }
 }
 def modelInfo = ext.modules[this.name]
+println "${this.name} ${modelInfo}"
 useDefaultConfiguration(modelInfo)
