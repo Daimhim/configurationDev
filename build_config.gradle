@@ -167,6 +167,11 @@ ext {
                         sourceCompatibility JavaVersion.VERSION_1_8
                         targetCompatibility JavaVersion.VERSION_1_8
                     }
+                    sourceSets.main{
+                        manifest.srcFile 'src/app/AndroidManifest.xml'
+                        java.srcDirs = ['src/app/java', 'src/main/java']
+                        res.srcDirs = ['src/app/res','src/main/res']
+                    }
                 }
                 project.dependencies {
                 }
@@ -193,6 +198,14 @@ ext {
                     compileOptions {
                         sourceCompatibility JavaVersion.VERSION_1_8
                         targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                    sourceSets.main{
+                        manifest.srcFile 'src/main/AndroidManifest.xml'
+                        java.srcDirs = ['src/main/java', 'src/main/java']
+                        res.srcDirs = ['src/main/res','src/main/res']
+                        resources {
+                             exclude 'src/app/*'
+                        }
                     }
                 }
                 project.dependencies {
@@ -223,6 +236,11 @@ ext {
                         sourceCompatibility JavaVersion.VERSION_1_8
                         targetCompatibility JavaVersion.VERSION_1_8
                     }
+                    sourceSets.main{
+                        manifest.srcFile 'src/app/AndroidManifest.xml'
+                        java.srcDirs = ['src/app/java', 'src/main/java']
+                        res.srcDirs = ['src/app/res','src/main/res']
+                    }
                 }
                 project.dependencies {
                 }
@@ -251,6 +269,14 @@ ext {
                     compileOptions {
                         sourceCompatibility JavaVersion.VERSION_1_8
                         targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                    sourceSets.main{
+                        manifest.srcFile 'src/main/AndroidManifest.xml'
+                        java.srcDirs = ['src/main/java', 'src/main/java']
+                        res.srcDirs = ['src/main/res','src/main/res']
+                        resources {
+                             exclude 'src/app/*'
+                        }
                     }
                 }
                 project.dependencies {
