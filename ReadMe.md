@@ -7,10 +7,10 @@
 该项目把编译一个模块的类型从原本固定在编译器配置文件中转变到代码中，使开发者可以更灵活的定制项目配置和编译过程
 
 下图是我个人项目中应用
-![image](https://github.com/Daimhim/resources/blob/main/1C1ECC437D0D442B846EDDA2A7929978.png)
+![image](https://github.com/Daimhim/resources/blob/main/configurationDev/1C1ECC437D0D442B846EDDA2A7929978.png)
 
 在model中的使用
-![image](https://github.com/Daimhim/resources/blob/main/7F0FA3A6B6E24E7AAEE0AD9D3A939E2D.png)
+![image](https://github.com/Daimhim/resources/blob/main/configurationDev/7F0FA3A6B6E24E7AAEE0AD9D3A939E2D.png)
 
 ## 通过git子模块功能吧configurationDev导入项目的根目录
 
