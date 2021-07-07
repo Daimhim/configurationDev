@@ -20,6 +20,7 @@ git submodule add https://github.com/Daimhim/configurationDev.git configurationD
 ```
 几个简单的子模块操作
 ```
+git submodule init //初始化子模块
 git submodule update //更新子模块
 git submodule update --remote //更新子模块为远程项目的最新版本
 ```
