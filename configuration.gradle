@@ -153,6 +153,10 @@ ext {
             'android'                  : 'com.google.android:android:4.1.1.4',
             'mmkv_static'              : 'com.tencent:mmkv-static:1.2.10',
             'java_websocket'           : "org.java-websocket:Java-WebSocket:1.5.1",
+            'assistant'                : 'org.daimhim.assistant:assistant:1.1.9-SNAPSHOT',
+            'provider'                 : 'com.zjkj.provider:provider:1.0.9-SNAPSHOT',
+            'marble'                   : 'org.daimhim.marble:marble:1.0.2-SNAPSHOT',
+            'preset'                   : 'com.zjkj.preset:preset:1.0.2-SNAPSHOT',
     ]
     //Android 单元和UI测试
     androidTest = [
