@@ -146,8 +146,8 @@ ext {
             // extension-okhttp
             'extension_okhttp'         : 'com.google.android.exoplayer:extension-okhttp:2.13.3',
             //ARouter  https://github.com/alibaba/ARouter
-            'arouter_api'              : 'com.alibaba:arouter-api:1.5.1',
-            'arouter_compiler'         : 'com.alibaba:arouter-compiler:1.5.1',
+            'arouter_api'              : 'com.alibaba:arouter-api:1.5.2',
+            'arouter_compiler'         : 'com.alibaba:arouter-compiler:1.5.2',
             'auto_service_annotations' : 'com.google.auto.service:auto-service-annotations:1.0-rc6',
             'auto_service'             : 'com.google.auto.service:auto-service:1.0-rc6',
             'android'                  : 'com.google.android:android:4.1.1.4',

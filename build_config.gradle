@@ -145,16 +145,16 @@ ext {
             case GROOVY_LIB:
                 break
             case JAVA_MODEL_LIB:
-                project.apply plugin: 'com.android.application'
+                project.apply plugin: 'com.android.library'
                 project.android {
                     compileSdkVersion compile_Sdk_Version
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
-                        applicationId model.id
                         targetSdkVersion target_Sdk_Version
                         minSdkVersion min_Sdk_Version
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                        consumerProguardFiles "consumer-rules.pro"
                     }
 
                     buildTypes {
@@ -168,53 +168,19 @@ ext {
                         targetCompatibility JavaVersion.VERSION_1_8
                     }
                     sourceSets.main{
-                        manifest.srcFile 'src/app/AndroidManifest.xml'
-                        java.srcDirs = ['src/app/java', 'src/main/java']
-                        res.srcDirs = ['src/app/res','src/main/res']
+                        manifest.srcFile 'src/main/AndroidManifest.xml'
+                        java.srcDirs = ['src/main/java', 'src/main/java']
+                        res.srcDirs = ['src/main/res','src/main/res']
+                        resources {
+                             exclude 'src/app/*'
+                        }
                     }
                 }
                 project.dependencies {
                 }
                 break
             case JAVA_MODEL_TRANSFORM_LIB:
-                project.apply plugin: 'com.android.library'
-                project.android {
-                    compileSdkVersion compile_Sdk_Version
-                    buildToolsVersion build_Tools_Version
-                    defaultConfig {
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
-
-                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-                        consumerProguardFiles "consumer-rules.pro"
-                    }
-
-                    buildTypes {
-                        release {
-                            minifyEnabled false
-                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-                        }
-                    }
-                    compileOptions {
-                        sourceCompatibility JavaVersion.VERSION_1_8
-                        targetCompatibility JavaVersion.VERSION_1_8
-                    }
-                    sourceSets.main{
-                        manifest.srcFile 'src/main/AndroidManifest.xml'
-                        java.srcDirs = ['src/main/java', 'src/main/java']
-                        res.srcDirs = ['src/main/res','src/main/res']
-                        resources {
-                             exclude 'src/app/*'
-                        }
-                    }
-                }
-                project.dependencies {
-                }
-                break
-            case KOTLIN_MODEL_LIB:
                 project.apply plugin: 'com.android.application'
-                project.apply plugin: 'kotlin-android'
-                project.apply plugin: 'kotlin-kapt'
                 project.android {
                     compileSdkVersion compile_Sdk_Version
                     buildToolsVersion build_Tools_Version
@@ -245,7 +211,7 @@ ext {
                 project.dependencies {
                 }
                 break
-            case KOTLIN_MODEL_TRANSFORM_LIB:
+            case KOTLIN_MODEL_LIB:
                 project.apply plugin: 'com.android.library'
                 project.apply plugin: 'kotlin-android'
                 project.apply plugin: 'kotlin-kapt'
@@ -277,6 +243,40 @@ ext {
                         resources {
                              exclude 'src/app/*'
                         }
+                    }
+                }
+                project.dependencies {
+                }
+                break
+            case KOTLIN_MODEL_TRANSFORM_LIB:
+                project.apply plugin: 'com.android.application'
+                project.apply plugin: 'kotlin-android'
+                project.apply plugin: 'kotlin-kapt'
+                project.android {
+                    compileSdkVersion compile_Sdk_Version
+                    buildToolsVersion build_Tools_Version
+                    defaultConfig {
+                        applicationId model.id
+                        targetSdkVersion target_Sdk_Version
+                        minSdkVersion min_Sdk_Version
+
+                        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                    }
+
+                    buildTypes {
+                        release {
+                            minifyEnabled false
+                            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                        }
+                    }
+                    compileOptions {
+                        sourceCompatibility JavaVersion.VERSION_1_8
+                        targetCompatibility JavaVersion.VERSION_1_8
+                    }
+                    sourceSets.main{
+                        manifest.srcFile 'src/app/AndroidManifest.xml'
+                        java.srcDirs = ['src/app/java', 'src/main/java']
+                        res.srcDirs = ['src/app/res','src/main/res']
                     }
                 }
                 project.dependencies {
