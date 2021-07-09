@@ -293,7 +293,7 @@ ext {
             }
         }
         if(modelCEX2.containsKey(model.name)){
-            for(item in modelCEX[model.name]){
+            for(item in modelCEX2[model.name]){
                  item.execute()
             }
         }
