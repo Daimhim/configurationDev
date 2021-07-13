@@ -55,7 +55,9 @@ ext {
     ]
     def camerax_version = '1.1.0-alpha04'
     def j_push_version = '4.0.6'
+    def room_version = "2.3.0"
     //统一的lib 版本管理 除apk模块以外 其他模块依赖时请使用 编译模式
+    //Android 单元和UI测试
     globalDependencies = [
             'coil'                     : "io.coil-kt:coil:1.2.0",
             'timber'                   : 'com.jakewharton.timber:timber:4.7.1',
@@ -83,9 +85,11 @@ ext {
             'vivo_plugin'              : "cn.jiguang.sdk.plugin:vivo:$j_push_version",
             //https://github.com/Nightonke/BoomMenu
             'boommenu'                 : 'com.nightonke:boommenu:2.0.3',
-            //数据库
-            'room_runtime'             : "android.arch.persistence.room:runtime:1.1.1",
-            'room_compiler'            : "android.arch.persistence.room:compiler:1.1.1",
+            //数据库//room数据库
+            room_runtime               : "androidx.room:room-runtime:$room_version",
+            room_ktx                   : "androidx.room:room-ktx:$room_version",
+            room_compiler              : "androidx.room:room-compiler:$room_version", //kapt
+            room_testing               : "androidx.room:room-testing:$room_version", //testImplementation
             //地图
             'amap_3dmap'               : 'com.amap.api:3dmap:7.7.0',
             'amap_location'            : 'com.amap.api:location:5.0.0',
@@ -157,8 +161,9 @@ ext {
             'provider'                 : 'com.zjkj.provider:provider:1.0.9-SNAPSHOT',
             'marble'                   : 'org.daimhim.marble:marble:1.0.2-SNAPSHOT',
             'preset'                   : 'com.zjkj.preset:preset:1.0.2-SNAPSHOT',
+            //阿里云视频上传
+            aliyun_upload              : 'com.aliyun.video.android:upload:1.6.1',
     ]
-    //Android 单元和UI测试
     androidTest = [
             'junit'         : 'junit:junit:4.13.2', //testImplementation
             'androidx_junit': 'androidx.test.ext:junit:1.1.2', //androidTestImplementation
