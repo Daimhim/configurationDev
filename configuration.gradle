@@ -119,7 +119,10 @@ ext {
             //https://gitee.com/z8806c/ImagePicker
             //图片选择器
             'imagePicker'              : 'com.gitee.harisucici:ImagePicker:0.0.2',
-            //glide 高斯模糊
+            //glide
+            glide                      : 'com.github.bumptech.glide:glide:4.8.0',
+            glide_compiler             : 'com.github.bumptech.glide:compiler:4.8.0',
+            //高斯模糊
             'glide_transformations'    : 'jp.wasabeef:glide-transformations:3.0.1',
             //侧滑库
             'swipe_reveal_layout'      : 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0',
