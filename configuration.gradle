@@ -123,7 +123,7 @@ ext {
             glide                      : 'com.github.bumptech.glide:glide:4.8.0',
             glide_compiler             : 'com.github.bumptech.glide:compiler:4.8.0',
             //高斯模糊
-            'glide_transformations'    : 'jp.wasabeef:glide-transformations:3.0.1',
+            'glide_transformations'    : 'jp.wasabeef:glide-transformations:4.3.0',
             //侧滑库
             'swipe_reveal_layout'      : 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.0',
             //解决LiveData数据倒灌
