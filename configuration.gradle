@@ -163,7 +163,7 @@ ext {
             'assistant'                : 'org.daimhim.assistant:assistant:1.1.9-SNAPSHOT',
             'provider'                 : 'com.zjkj.provider:provider:1.0.9-SNAPSHOT',
             'marble'                   : 'org.daimhim.marble:marble:1.0.2-SNAPSHOT',
-            'preset'                   : 'com.zjkj.preset:preset:1.0.2-SNAPSHOT',
+            'preset'                   : 'com.zjkj.preset:preset:1.1.2-SNAPSHOT',
             //阿里云视频上传
             aliyun_upload              : 'com.aliyun.video.android:upload:1.6.1',
     ]
