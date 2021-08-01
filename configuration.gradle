@@ -1,4 +1,5 @@
 ext {
+
     JAVA_MAIN_LIB = 0  // ： 纯app
     KOTLIN_MAIN_LIB = 1  // ： 纯app
     JAVA_LIB = 2 // ： 纯java

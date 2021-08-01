@@ -1,9 +1,15 @@
-def projectName = rootProject.name
-def rootDir = new StringBuffer(rootProject.rootDir.toString())
+//加载资源
+def projectName = "StandByMe"
+def projectPath = System.getProperty("user.dir")
+try{
+    projectName = ROOT_PROJECT_NAME
+}catch (Exception ext){
+
+}
+def rootDir = new StringBuffer(projectPath)
 def index = rootDir.indexOf(projectName)
 def rootPath = rootDir.substring(0, index+projectName.length())
 apply from: "$rootPath/config.gradle"
-
 
 ext {
     useDefaultConfiguration = { model ->
@@ -11,12 +17,12 @@ ext {
             case JAVA_MAIN_LIB:
                 project.apply plugin: 'com.android.application'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
                         applicationId model.id
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
@@ -40,12 +46,12 @@ ext {
                 project.apply plugin: 'kotlin-android'
                 project.apply plugin: 'kotlin-kapt'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
                         applicationId model.id
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
@@ -87,11 +93,11 @@ ext {
             case JAVA_SDK:
                 project.apply plugin: 'com.android.library'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -116,11 +122,11 @@ ext {
                 project.apply plugin: 'kotlin-android'
                 project.apply plugin: 'kotlin-kapt'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -147,11 +153,11 @@ ext {
             case JAVA_MODEL_LIB:
                 project.apply plugin: 'com.android.library'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -182,12 +188,12 @@ ext {
             case JAVA_MODEL_TRANSFORM_LIB:
                 project.apply plugin: 'com.android.application'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
                         applicationId model.id
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
@@ -216,11 +222,11 @@ ext {
                 project.apply plugin: 'kotlin-android'
                 project.apply plugin: 'kotlin-kapt'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                         consumerProguardFiles "consumer-rules.pro"
@@ -253,12 +259,12 @@ ext {
                 project.apply plugin: 'kotlin-android'
                 project.apply plugin: 'kotlin-kapt'
                 project.android {
-                    compileSdkVersion compile_Sdk_Version
+                    compileSdkVersion compile_Sdk_Version as int
                     buildToolsVersion build_Tools_Version
                     defaultConfig {
                         applicationId model.id
-                        targetSdkVersion target_Sdk_Version
-                        minSdkVersion min_Sdk_Version
+                        targetSdkVersion target_Sdk_Version as int
+                        minSdkVersion min_Sdk_Version as int
 
                         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                     }
