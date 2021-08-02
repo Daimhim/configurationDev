@@ -163,9 +163,12 @@ ext {
             'assistant'                : 'org.daimhim.assistant:assistant:1.1.9-SNAPSHOT',
             'provider'                 : 'com.zjkj.provider:provider:1.0.9-SNAPSHOT',
             'marble'                   : 'org.daimhim.marble:marble:1.0.5-SNAPSHOT',
-            'preset'                   : 'com.zjkj.preset:preset:1.1.5-SNAPSHOT',
+            'preset'                   : 'com.zjkj.preset:preset:1.1.6-SNAPSHOT',
             //阿里云视频上传
             aliyun_upload              : 'com.aliyun.video.android:upload:1.6.1',
+            rvadapter                  : 'org.daimhim.rvdecoration:rvadapter:1.4.3-SNAPSHOT',
+            rvadapterex                : 'org.daimhim.rvdecoration:rvadapterex:1.0.4-SNAPSHOT',
+            rvdecoration               : 'org.daimhim.rvdecoration:rvdecoration:1.1.4-SNAPSHOT',
     ]
     androidTest = [
             'junit'         : 'junit:junit:4.13.2', //testImplementation
