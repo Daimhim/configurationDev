@@ -44,6 +44,8 @@ ext {
             'navigation_fragment'    : 'androidx.navigation:navigation-fragment:2.3.5',
             'navigation_ui'          : 'androidx.navigation:navigation-ui:2.3.5',
             'recyclerview'           : 'androidx.recyclerview:recyclerview:1.2.1',
+            'androidx_activity'      : 'androidx.activity:activity:1.2.0',
+            'androidx_fragment'      : 'androidx.fragment:fragment:1.2.0',
     ]
     //Android 基础模块
     kotlinAndroidDependencies = [
@@ -86,10 +88,10 @@ ext {
             //https://github.com/Nightonke/BoomMenu
             'boommenu'                 : 'com.nightonke:boommenu:2.0.3',
             //数据库//room数据库
-            room_runtime               : "androidx.room:room-runtime:$room_version",
-            room_ktx                   : "androidx.room:room-ktx:$room_version",
-            room_compiler              : "androidx.room:room-compiler:$room_version", //kapt
-            room_testing               : "androidx.room:room-testing:$room_version", //testImplementation
+            'room_runtime'               : "androidx.room:room-runtime:$room_version",
+            'room_ktx'                   : "androidx.room:room-ktx:$room_version",
+            'room_compiler'              : "androidx.room:room-compiler:$room_version", //kapt
+            'room_testing'               : "androidx.room:room-testing:$room_version", //testImplementation
             //地图
             'amap_3dmap'               : 'com.amap.api:3dmap:7.7.0',
             'amap_location'            : 'com.amap.api:location:5.0.0',
@@ -165,10 +167,10 @@ ext {
             'marble'                   : 'org.daimhim.marble:marble:1.0.5-SNAPSHOT',
             'preset'                   : 'com.zjkj.preset:preset:1.1.6-SNAPSHOT',
             //阿里云视频上传
-            aliyun_upload              : 'com.aliyun.video.android:upload:1.6.1',
-            rvadapter                  : 'org.daimhim.rvdecoration:rvadapter:1.4.3-SNAPSHOT',
-            rvadapterex                : 'org.daimhim.rvdecoration:rvadapterex:1.0.4-SNAPSHOT',
-            rvdecoration               : 'org.daimhim.rvdecoration:rvdecoration:1.1.4-SNAPSHOT',
+            'aliyun_upload'              : 'com.aliyun.video.android:upload:1.6.1',
+            'rvadapter'                  : 'org.daimhim.rvdecoration:rvadapter:1.4.4-SNAPSHOT',
+            'rvadapterex'                : 'org.daimhim.rvdecoration:rvadapterex:1.0.5-SNAPSHOT',
+            'rvdecoration'               : 'org.daimhim.rvdecoration:rvdecoration:1.1.4-SNAPSHOT',
     ]
     androidTest = [
             'junit'         : 'junit:junit:4.13.2', //testImplementation
