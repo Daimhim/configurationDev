@@ -169,7 +169,7 @@ ext {
             //阿里云视频上传
             'aliyun_upload'              : 'com.aliyun.video.android:upload:1.6.1',
             'rvadapter'                  : 'org.daimhim.rvdecoration:rvadapter:1.4.4-SNAPSHOT',
-            'rvadapterex'                : 'org.daimhim.rvdecoration:rvadapterex:1.0.5-SNAPSHOT',
+            'rvadapterex'                : 'org.daimhim.rvdecoration:rvadapterex:1.0.6-SNAPSHOT',
             'rvdecoration'               : 'org.daimhim.rvdecoration:rvdecoration:1.1.4-SNAPSHOT',
     ]
     androidTest = [
