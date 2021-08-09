@@ -32,7 +32,7 @@ ext {
         modules[name] = new ModelInfo(name, include, mode, id)
     }
 
-    //Android原生依赖
+    //Android原生依赖你好
     androidxDependencies = [
             'appcompat'              : 'androidx.appcompat:appcompat:1.2.0',
             'material'               : 'com.google.android.material:material:1.3.0',
