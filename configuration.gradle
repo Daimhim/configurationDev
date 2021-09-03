@@ -45,6 +45,7 @@ ext {
             'navigation_fragment'    : 'androidx.navigation:navigation-fragment:2.3.5',
             'navigation_ui'          : 'androidx.navigation:navigation-ui:2.3.5',
             'recyclerview'           : 'androidx.recyclerview:recyclerview:1.2.1',
+            'livedata'               : 'android.arch.lifecycle:livedata:1.1.0'
     ]
     //Android 基础模块
     kotlinAndroidDependencies = [
